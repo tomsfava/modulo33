@@ -1,8 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from '@testing-library/react'
+import App from './App'
 
-test('renders learn react linka', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('Testes para o componente principal', () => {
+  test('Deve renderizar corretamente', () => {
+    render(<App />)
+    expect(screen.getByText('Cadastrar')).toBeInTheDocument()
+  })
+})
